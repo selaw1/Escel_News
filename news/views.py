@@ -16,6 +16,7 @@ def get_static(path):
     else:
         return static(path)
 
+
 def excel(path):
 
     wb = openpyxl.load_workbook(path)
