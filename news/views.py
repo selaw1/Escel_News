@@ -14,7 +14,9 @@ def get_static(path):
 #     if settings.DEBUG:
 #         return find(path)
 #     else:
-      return static(path)
+    print('static: ', static(path))
+    print('staticfilestorage: ', staticfiles_storage.path(path))
+    return staticfiles_storage.path(path)
 
 
 def excel(path):
@@ -42,7 +44,7 @@ def excel(path):
 
 def sport_news(request):
     path = 'excel\sport_update.xlsx'
-    excel_data = excel(staticfiles_storage.path(path))
+    excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Sport News'})
 
 def business_news(request):
