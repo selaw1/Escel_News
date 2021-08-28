@@ -14,8 +14,9 @@ def get_static(path):
     if settings.DEBUG:
         return find(path)
     else:
+        # print('static: ', static(path))
+        # print('staticfilestorage: ', staticfiles_storage.path(path))
         return staticfiles_storage.path(path)
-
 
 def excel(path):
 
@@ -41,31 +42,31 @@ def excel(path):
     return excel_data
 
 def sport_news(request):
-    path = 'excel\sport_update.xlsx'
-    excel_data = excel(staticfiles_storage.path(path))
+    path = 'excel/sport_update.xlsx'
+    excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Sport News'})
 
 def business_news(request):
-    path = "excel\\business.xlsx"
+    path = "excel/business.xlsx"
     excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Business News'})
 
 def health_news(request):
-    path = 'excel\health.xlsx'
+    path = 'excel/health.xlsx'
     excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Health News'})
 
 def tech_news(request):
-    path = 'excel\\technology.xlsx'
+    path = 'excel/technology.xlsx'
     excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Technology News'})
 
 def politics_news(request):
-    path = 'excel\politics.xlsx'
+    path = 'excel/politics.xlsx'
     excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Politic News'})
 
 def culture_news(request):
-    path = 'excel\culture.xlsx'
+    path = 'excel/culture.xlsx'
     excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Culture News'})
