@@ -1,0 +1,25 @@
+.space{
+    margin-right: 3px;
+}
+
+.header{
+    text-align:center; 
+    font-size:1.3rem;
+    font-weight: 700;
+}
+
+.type{
+    text-align:center; 
+    font-weight: 700;
+    font-size:1.5rem;
+}
+
+.red{
+    color: #d9534f;
+}
+.blue{
+    color: #0275d8;
+}
+.blue2{
+    color: #5bc0de;
+}
