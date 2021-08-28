@@ -14,7 +14,7 @@ def get_static(path):
     if settings.DEBUG:
         return find(path)
     else:
-        return static(path)
+        return staticfiles_storage.url(path)
 
 def excel(path):
 
