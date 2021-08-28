@@ -43,7 +43,7 @@ def excel(path):
     return excel_data
 
 def sport_news(request):
-    path = 'excel\sport_update.xlsx'
+    path = 'excel/sport_update.xlsx'
     excel_data = excel(get_static(path))
     return render(request, 'news/news.html', {"excel_data":excel_data, 'type':'Sport News'})
 
