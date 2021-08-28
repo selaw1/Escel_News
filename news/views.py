@@ -11,10 +11,10 @@ def home_news(request):
     return render(request, 'news/home.html')    
 
 def get_static(path):
-    if settings.DEBUG:
-        return find(path)
-    else:
-        return static(path)
+#     if settings.DEBUG:
+#         return find(path)
+#     else:
+      return static(path)
 
 
 def excel(path):
