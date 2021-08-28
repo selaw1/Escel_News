@@ -11,21 +11,12 @@ def home_news(request):
     return render(request, 'news/home.html')    
 
 def get_static(path):
-<<<<<<< HEAD
     if settings.DEBUG:
         return find(path)
     else:
         # print('static: ', static(path))
         # print('staticfilestorage: ', staticfiles_storage.path(path))
         return staticfiles_storage.path(path)
-=======
-#     if settings.DEBUG:
-#         return find(path)
-#     else:
-    print('static: ', static(path))
-    print('staticfilestorage: ', staticfiles_storage.path(path))
-    return staticfiles_storage.path(path)
->>>>>>> origin/main
 
 def excel(path):
 
